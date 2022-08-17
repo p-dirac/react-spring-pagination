@@ -1,0 +1,121 @@
+
+
+from C:\ZZD-Dev-Samples\SpringBoot\react-spring-war
+
+mvn clean install   (creates war file in target directory)
+
+
+----
+
+for react local node_modules issues,
+
+in C:\ZZD-Dev-Samples\SpringBoot\react-spring-jar\src\main\frontend
+npm audit fix --force
+
+----
+
+to run with maven, without jar:
+
+mvn spring-boot:run
+
+----
+If pom.xml has provided set under scope, but no war packaging
+then a jar file is produced.
+
+in separate cmd window, 
+from C:\ZZD-Dev-Samples\SpringBoot\react-spring-jar,
+
+to run react-spring-jar:
+
+java -jar target/react-boot-app.jar
+
+then to check back end, use url:
+localhost:8081/back/employees/{page}/{size}
+
+localhost:8081/back/employees/1/3
+
+localhost:8081/back/employees  bypasses react, will show employee list via backend spring boot from db
+
+localhost:8081/front/home  will bring up react "employee list" screen via backend spring boot from db
+---
+to run react part:
+
+in separate cmd window, 
+from C:\ZZD-Dev-Samples\SpringBoot\react-spring-jar\src\main\frontend>
+
+npm start
+
+then use port 3000, to open react page:
+localhost:3000/front/home  will bring up react (without spring boot)
+
+click on links, which will invoke urls to spring boot back end, on port 8081
+localhost:8081/front/home
+
+---
+
+url:
+localhost:8081/index.html
+
+localhost:8081/front/home  will bring up react "employee list" screen via backend spring boot from db
+
+localhost:3000/front/home  will bring up react (without spring boot)
+
+localhost:8081/back/employees  bypasses react, will show employee list via backend spring boot from db
+
+localhost:8081/front/add opens react "add employee" screen
+
+localhost:8081/front/123  should return "not found" screen
+
+----
+
+to run war file:
+
+copy react-boot-app.war to tomcat webapps directory
+
+----
+
+urls for react-spring-war:
+
+----
+Note:  spring boot war does not work on tomcat 10 due to jakarta EE namespace
+----
+
+react-spring-app-1.1.war
+
+react-boot-app.war
+
+pom.xml warName: react-spring-app-1.1 or react-boot-app
+
+----------------
+
+localhost:8081/react-spring-app-1.1/ 
+or
+localhost:8081/react-boot-app/front/
+
+-----
+localhost:8081/react-spring-app-1.1/api/v1/employees
+or
+localhost:8081/react-boot-app/front/
+localhost:8081/react-boot-app/front/home
+localhost:8081/react-boot-app/front/employees
+
+----
+
+from js file to rest java code:
+
+localhost:8081/react-boot-app/back/employees
+
+----
+
+will not work, need war file name in url
+localhost:8081/api/v1/employees  (need war file name)
+
+
+--------------------
+
+tomcat:
+
+localhost:8081  (goes to tomcat page, then login to manager page, list applications)
+
+
+password="my-ad5"  username="tom-ad
