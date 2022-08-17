@@ -1,0 +1,6 @@
+
+package-lock.json
+mybootlog
+/target/
+*/target/**
+*/node_modules/**
