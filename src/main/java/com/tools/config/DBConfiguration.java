@@ -12,6 +12,11 @@ import org.springframework.orm.hibernate5.HibernateTransactionManager;
 import org.springframework.orm.hibernate5.LocalSessionFactoryBean;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 
+/**
+ * Database configuration defined from parameters in resources/application.properties.
+ * 
+ * @author cook
+ */
 @Configuration
 //@EnableTransactionManagement
 //@EnableAutoConfiguration(exclude = { HibernateJpaAutoConfiguration.class })
