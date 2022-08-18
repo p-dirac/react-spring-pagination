@@ -64,10 +64,10 @@ function PageTable( { columns, data, fetchData,
      - react-table doesn't have UI, it's headless. We just need to put the react-table props from the Hooks, and it will do its magic automatically
      */
     return (
-            <div class="txleft">
+            <div class="cellpad">
                 <div class="d-flex justify-content-center">
                 <table class="tablebdr" {...getTableProps()}>
-                    <thead>
+                    <thead class="App">
                         {headerGroups.map(headerGroup => (
                                 <tr {...headerGroup.getHeaderGroupProps()}>
                                     {headerGroup.headers.map(column => (
@@ -76,7 +76,7 @@ function PageTable( { columns, data, fetchData,
                                 </tr>
                                         ))}
                     </thead>
-                    <tbody {...getTableBodyProps()}>
+                    <tbody class="txleft" {...getTableBodyProps()}>
                         {page.map((row, i) => {
                                 prepareRow(row);
                                 return (

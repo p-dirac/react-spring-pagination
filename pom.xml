@@ -9,7 +9,7 @@
 	<groupId>demo.springreact</groupId>
 	<artifactId>react-spring-app</artifactId>
 	<version>0.1-SNAPSHOT</version>
-	<name>demo-spring-react</name>
+	<name>react-spring-pagination</name>
 	<description>React Frontend and SpringBoot Backend</description>
 
 	<parent>
