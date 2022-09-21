@@ -1,6 +1,4 @@
-/*
- */
-package com.tools.model;
+package backend.model;
 
 import java.util.List;
 
