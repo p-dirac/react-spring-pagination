@@ -30,6 +30,8 @@
 		<frontend-maven-plugin.version>1.12.1</frontend-maven-plugin.version>
 		<npm.version>8.15.1</npm.version>
 		<node.version>v16.14.0</node.version>
+	 <maven.compiler.source>18</maven.compiler.source>
+	 <maven.compiler.target>18</maven.compiler.target>
 	</properties>
 	<dependencies>
 		<dependency>
