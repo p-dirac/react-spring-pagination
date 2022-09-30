@@ -6,3 +6,5 @@ exceed the limit size of a React table. The project also shows how React interfa
 the Spring boot REST API. 
 
 See React-Spring-Pagination-Overview.docx for more information.
+
+Keywords: React, Sping Boot, Pagination
