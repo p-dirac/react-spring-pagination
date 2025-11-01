@@ -5,6 +5,6 @@ This React Spring Boot project demostrates pagination when rows of data from a d
 exceed the limit size of a React table. The project also shows how React interfaces with
 the Spring boot REST API. 
 
-See React-Spring-Pagination-Overview.docx for more information.
+See React-Spring-Pagination-Overview.pdf for more information.
 
 Keywords: React, Sping Boot, Pagination
