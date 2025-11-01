@@ -33,7 +33,7 @@ public class EmployeeController {
 
     /**
      * Get employees one page at a time.
-     * 
+     *
      * @param pageNum in path, page number starts at zero
      * @param pageSize number of rows to retrieve from database table
      * @return list of employees
@@ -46,14 +46,13 @@ public class EmployeeController {
         // findAll returns a Page of entities meeting the paging restriction
         Page<EmployeeEntity> pagedResult = eRepo.findAll(paging);
         if (pagedResult.hasContent()) {
-        //convert Page to simpler format in PageData
-        PageData<EmployeeEntity> pageData = new PageData(pagedResult.getSize(), 
+	        //convert Page to simpler format in PageData
+	        PageData<EmployeeEntity> pageData = new PageData(pagedResult.getSize(),
                 pagedResult.getTotalPages(), pagedResult.getContent());
-           // long totalPages = pagedResult.getTotalPages();
-            return pageData; //pagedResult.getContent();
+            return pageData;
         } else {
-            PageData<EmployeeEntity> pageData = new PageData(); 
-            return pageData; 
+            PageData<EmployeeEntity> pageData = new PageData();
+            return pageData;
         }
     }
 

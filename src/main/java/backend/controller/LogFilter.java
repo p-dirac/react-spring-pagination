@@ -18,8 +18,8 @@ import org.springframework.stereotype.Component;
 @Component
 public class LogFilter implements Filter {
 
-// private static final Logger LOG = Logger.getLogger(LogFilter.class.getName());
 private static final Logger LOG=LoggerFactory.getLogger(LogFilter.class);
+
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
        // LOG.log(Level.INFO, "Hello from: " + request.getLocalAddr());

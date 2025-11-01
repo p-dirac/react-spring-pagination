@@ -11,9 +11,9 @@ import 'bootstrap/dist/css/bootstrap.css';
 /**
  * Creates HTML form to add new employee to database.
  * Sends employee object to server database.
- * 
+ *
  * ref: https://dev.to/tienbku/react-table-crud-example-using-hooks-react-table-v7-3emd
- * 
+ *
  * reset ref: https://jasonwatmore.com/post/2021/09/23/react-hook-form-reset-form-with-default-values-and-clear-errors
  *
  * @return {html} Form to add new employee, or update existing employee
@@ -21,9 +21,8 @@ import 'bootstrap/dist/css/bootstrap.css';
 const AddEmployee = () => {
     //
     console.log('AddEmployee');
-  //  let id = -1;
     const idRef = useRef(-1);
-    
+
     const defaultForm = useMemo(() => {
         return {
                     name: '',
@@ -43,9 +42,6 @@ const AddEmployee = () => {
             required: "Department is required"}
     };
 
-    //   const[name, setName] = useState('');
-    //    const[location, setLocation] = useState('');
-    //     const[department, setDepartment] = useState('');
     const navigate = useNavigate();
     //
     //
@@ -61,7 +57,6 @@ const AddEmployee = () => {
         console.log('from session: ', employee);
         hdr = "Update Employee";
     } else{
-     //   console.log('formState: ', formState);
         console.log('defaultForm: ', defaultForm);
             const emp = defaultForm;
             if (emp !== undefined) {
@@ -101,7 +96,7 @@ const AddEmployee = () => {
                     .catch(error => {
                         console.log('Something went wrong', error);
                     });
-            // reset id        
+            // reset id
             idRef.current = -1;
         } else {
             //add
@@ -171,10 +166,10 @@ const AddEmployee = () => {
                                 placeholder="Enter name"
                                 {...register("name", reg.name)}
                                 />
-            
+
                         </div>
                     </div>
-            
+
                     <div class="mb-1 row">
                         <label class="col-form-label col-lg-6" htmlFor="department">Department:&nbsp;&nbsp;</label>
                         <div class="col-lg-6">
@@ -186,7 +181,7 @@ const AddEmployee = () => {
                                 placeholder="Enter Department"
                                 {...register("department", reg.department)}
                                 />
-            
+
                         </div>
                     </div>
                     <div class="mb-1 row">
@@ -215,7 +210,7 @@ const AddEmployee = () => {
                         </div>
                     </div>
                 </form>
-            
+
             </div>
             );
 };
